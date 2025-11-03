@@ -24,7 +24,12 @@ export const metadata: Metadata = {
   title: "ShoplyEasy - Votre Boutique en Ligne",
   description:
     "Découvrez une large sélection de produits de qualité sur ShoplyEasy. Votre boutique en ligne pour tous vos besoins.",
-    generator: 'v0.dev'
+    generator: 'Aziz zgolli',
+    icons: {
+      icon: "/logo.png",
+      shortcut: "/logo.png",
+      apple: "/logo.png",
+    },
 }
 
 export default function RootLayout({
