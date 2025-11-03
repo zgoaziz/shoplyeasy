@@ -1,8 +1,10 @@
 {
   "/api/auth/me/route": "app/api/auth/me/route.js",
-  "/api/advertisements/route": "app/api/advertisements/route.js",
-  "/api/categories/public/route": "app/api/categories/public/route.js",
   "/api/brands/public/route": "app/api/brands/public/route.js",
+  "/api/categories/public/route": "app/api/categories/public/route.js",
   "/api/products/public/route": "app/api/products/public/route.js",
-  "/page": "app/page.js"
+  "/api/products/public/[id]/route": "app/api/products/public/[id]/route.js",
+  "/api/advertisements/route": "app/api/advertisements/route.js",
+  "/page": "app/page.js",
+  "/product/[id]/page": "app/product/[id]/page.js"
 }

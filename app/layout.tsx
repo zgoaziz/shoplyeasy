@@ -1,5 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
+import type { Viewport } from "next"
 import { Inter, Playfair_Display } from "next/font/google"
 import "./globals.css"
 import { CartProvider } from "@/components/cart-context"
@@ -30,6 +31,13 @@ export const metadata: Metadata = {
       shortcut: "/logo.png",
       apple: "/logo.png",
     },
+}
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  viewportFit: "cover",
 }
 
 export default function RootLayout({

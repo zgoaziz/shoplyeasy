@@ -197,7 +197,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
       {/* Hero Section with Dynamic Advertisements */}
-      <section className="w-full h-screen relative">
+      <section className="w-full min-h-[100svh] relative">
         {loadingAds ? (
           <div className="w-full h-full flex items-center justify-center bg-gray-100">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gold"></div>
