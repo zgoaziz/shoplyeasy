@@ -1,7 +1,7 @@
 import { MongoClient } from 'mongodb'
 
-const uri = process.env.MONGODB_URI || 'mongodb+srv://zgolliaziz206_db_user:20082001@cluster0.x5cnvfa.mongodb.net/?appName=Cluster0'
-const options = {}
+const uri = process.env.MONGODB_URI || 'mongodb+srv://zgolliaziz206_db_user:20082001@cluster0.x5cnvfa.mongodb.net/shoplyeasy?retryWrites=true&w=majority&tls=true'
+const options = { tls: true, serverSelectionTimeoutMS: 5000 }
 
 let client: MongoClient
 let clientPromise: Promise<MongoClient>
