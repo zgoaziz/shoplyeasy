@@ -6,7 +6,7 @@ export default function AboutPage() {
       <h1 className="text-4xl font-bold text-navy mb-8 text-center">À propos de ShoplyEasy</h1>
       <div className="flex flex-col md:flex-row gap-12 items-center mb-16">
         <div className="flex-1">
-          <Image src="/orig.jpg" alt="ShoplyEasy" width={400} height={400} className="rounded-lg shadow" />
+          <Image src="/logo.png" alt="ShoplyEasy" width={220} height={220} className="rounded-lg shadow mx-auto" />
         </div>
         <div className="flex-1">
           <h2 className="text-2xl font-semibold text-gold mb-4">Votre Partenaire E-Commerce de Confiance</h2>
@@ -55,19 +55,19 @@ export default function AboutPage() {
         <h3 className="text-2xl font-bold text-gold mb-6 text-center">Notre Équipe</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center">
-            <Image src="/placeholder-user.jpg" alt="Chef Pâtissière" width={100} height={100} className="rounded-full mb-4" />
+            <Image src="/logo.png" alt="Équipe ShoplyEasy" width={90} height={90} className="rounded-full mb-4" />
             <div className="font-bold text-navy">Équipe ShoplyEasy</div>
             <div className="text-gold text-sm mb-2">Fondateurs</div>
             <div className="text-gray-600 text-center text-sm">Fondateurs de ShoplyEasy, passionnés par l'innovation et le service client exceptionnel.</div>
           </div>
           <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center">
-            <Image src="/placeholder-user.jpg" alt="Chef Oriental" width={100} height={100} className="rounded-full mb-4" />
+            <Image src="/logo.png" alt="Équipe Produits" width={90} height={90} className="rounded-full mb-4" />
             <div className="font-bold text-navy">Équipe ShoplyEasy</div>
             <div className="text-gold text-sm mb-2">Gestion des Produits</div>
             <div className="text-gray-600 text-center text-sm">Notre équipe sélectionne et gère les produits avec soin pour garantir la meilleure qualité.</div>
           </div>
           <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center">
-            <Image src="/placeholder-user.jpg" alt="Responsable Service" width={100} height={100} className="rounded-full mb-4" />
+            <Image src="/logo.png" alt="Service Client" width={90} height={90} className="rounded-full mb-4" />
             <div className="font-bold text-navy">Équipe ShoplyEasy</div>
             <div className="text-gold text-sm mb-2">Service Client</div>
             <div className="text-gray-600 text-center text-sm">Toujours à l'écoute pour garantir une expérience client inoubliable.</div>

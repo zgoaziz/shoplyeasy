@@ -18,9 +18,9 @@ interface Advertisement {
   video?: string
   type?: 'image' | 'video'
   link?: string
-  position: { x: number; y: number }
+  position?: { x: number; y: number; section?: string }
   orientation: 'vertical' | 'horizontal'
-  section: string
+  section?: string
   isActive: boolean
 }
 
@@ -165,7 +165,9 @@ export default function Home() {
     return advertisements.filter(ad => {
       // Vérifier si la publicité a au moins une image ou une vidéo
       const hasMedia = (ad.type === 'video' && ad.video) || (ad.image && ad.image.trim() !== '')
-      return ad.section === section && ad.isActive && hasMedia
+      // Certaines anciennes entrées sauvegardent la section dans position.section
+      const sectionMatch = ad.section === section || ad.position?.section === section
+      return sectionMatch && ad.isActive && hasMedia
     })
   }
 
@@ -203,24 +205,26 @@ export default function Home() {
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gold"></div>
           </div>
         ) : horizontalAds.length > 0 ? (
-          <ImageSlider 
-            images={horizontalAds.map(ad => ({
-              url: (ad.type === 'video' && ad.video) ? ad.video : ad.image,
-              alt: 'Publicité',
-              title: '',
-              type: ad.type || 'image'
-            }))} 
-          />
+          <div className="absolute inset-0">
+            <ImageSlider 
+              images={horizontalAds.map(ad => ({
+                url: (ad.type === 'video' && ad.video) ? ad.video : ad.image,
+                alt: 'Publicité',
+                title: '',
+                type: ad.type || 'image'
+              }))} 
+            />
+          </div>
         ) : (
-          <div className="w-full h-full bg-gradient-to-br from-gold/20 to-navy flex items-center justify-center">
-            <div className="text-center px-4">
-              <h1 className="text-4xl sm:text-6xl font-serif font-bold text-white mb-4">
-                ShoplyEasy
-              </h1>
-              <p className="text-xl text-white/90">
-                Votre marketplace de confiance
-              </p>
-            </div>
+          <div className="absolute inset-0">
+            <ImageSlider 
+              images={sliderImages.map(img => ({
+                url: img.url,
+                alt: img.alt,
+                title: img.title,
+                type: 'image',
+              }))}
+            />
           </div>
         )}
         <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8">

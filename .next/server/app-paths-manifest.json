@@ -1,8 +1,15 @@
 {
+  "/api/notifications/route": "app/api/notifications/route.js",
   "/api/categories/public/route": "app/api/categories/public/route.js",
   "/api/products/public/route": "app/api/products/public/route.js",
+  "/api/brands/public/route": "app/api/brands/public/route.js",
   "/api/auth/me/route": "app/api/auth/me/route.js",
+  "/api/orders/route": "app/api/orders/route.js",
   "/api/products/public/[id]/route": "app/api/products/public/[id]/route.js",
-  "/page": "app/page.js",
+  "/menu/page": "app/menu/page.js",
+  "/panier/page": "app/panier/page.js",
+  "/order/page": "app/order/page.js",
+  "/addresses/page": "app/addresses/page.js",
+  "/dashboard/commandes/page": "app/dashboard/commandes/page.js",
   "/product/[id]/page": "app/product/[id]/page.js"
 }

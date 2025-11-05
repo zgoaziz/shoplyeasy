@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 export default function OrderPage() {
   const router = useRouter();
   const { items, total, clearCart } = useCart();
+
   const [form, setForm] = useState({ name: "", email: "", phone: "", address: "" });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -16,6 +17,9 @@ export default function OrderPage() {
   const [isMapOpen, setIsMapOpen] = useState(false);
   const [selectedPosition, setSelectedPosition] = useState<{ lat: number; lng: number } | null>(null);
   const [mapLoaded, setMapLoaded] = useState(false);
+  const [deliveryOption] = useState<'retrait' | 'livraison'>('livraison');
+  const [shippingFee] = useState<number>(8);
+  const grandTotal = +(total + (deliveryOption === 'livraison' ? shippingFee : 0)).toFixed(2);
 
   useEffect(() => {
     // Vérifier si l'utilisateur est authentifié
@@ -227,7 +231,9 @@ export default function OrderPage() {
           phone: form.phone,
           address: form.address,
           items: orderItems,
-          total: total,
+          total: grandTotal,
+          shippingFee: deliveryOption === 'livraison' ? shippingFee : 0,
+          deliveryOption,
           paymentMethod: 'Sur place',
         }),
       })
@@ -248,7 +254,8 @@ export default function OrderPage() {
         `Adresse: ${form.address}\n` +
         `---\n` +
         items.map((item) => `• ${item.name} x${item.quantity} - ${(item.price * item.quantity).toFixed(2)}dt`).join("\n") +
-        `\nTotal: ${total.toFixed(2)}dt\nPaiement: Sur place`;
+        `\nFrais de livraison: ${(deliveryOption === 'livraison' ? shippingFee : 0).toFixed(2)}dt` +
+        `\nTotal: ${grandTotal.toFixed(2)}dt\nPaiement: Sur place`;
 
       clearCart();
       
@@ -306,6 +313,11 @@ export default function OrderPage() {
             <MapPin className="h-5 w-5" />
           </button>
         </div>
+        {/* Livraison fixe */}
+        <div className="border rounded p-3">
+          <div className="font-semibold">Livraison</div>
+          <div className="text-sm text-gray-700 mt-1">Livraison à domicile: 8 DT (fixe)</div>
+        </div>
         <button type="submit" className="w-full bg-gold text-white py-2 rounded font-semibold hover:bg-gold/90 transition" disabled={loading}>
           {loading ? "Préparation..." : "Confirmer la commande"}
         </button>
@@ -321,9 +333,17 @@ export default function OrderPage() {
             </li>
           ))}
         </ul>
-        <div className="flex justify-between font-bold text-navy">
-          <span>Total</span>
+        <div className="flex justify-between text-sm">
+          <span>Sous‑total</span>
           <span>{total.toFixed(2)}dt</span>
+        </div>
+        <div className="flex justify-between text-sm">
+          <span>Frais de livraison</span>
+          <span>{(deliveryOption === 'livraison' ? shippingFee : 0).toFixed(2)}dt</span>
+        </div>
+        <div className="flex justify-between font-bold text-navy mt-1">
+          <span>Total</span>
+          <span>{grandTotal.toFixed(2)}dt</span>
         </div>
       </div>
 

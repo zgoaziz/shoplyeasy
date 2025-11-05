@@ -319,8 +319,8 @@ export default function ProductsPage() {
     const catId = categoryId || formData.category
     if (!catId) return false
     const category = categories.find(c => c._id === catId)
-    // Afficher les tailles uniquement si la catégorie est de type "chaussures"
-    return category?.categoryType === 'chaussures'
+    // Afficher les tailles si la catégorie gère des tailles (numériques ou lettres)
+    return category?.sizeType === 'numeric' || category?.sizeType === 'letter' || category?.categoryType === 'chaussures' || category?.categoryType === 'vetements'
   }
 
   const showColorSection = (categoryId?: string) => {

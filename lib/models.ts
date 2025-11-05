@@ -82,6 +82,8 @@ export interface Order {
     quantity: number
   }[]
   total: number
+  shippingFee?: number
+  deliveryOption?: string
   status?: 'en_attente' | 'en_cours' | 'confirmee' | 'en_livraison' | 'terminee' | 'pending' | 'processing' | 'completed' | 'cancelled' | 'annulee'
   paymentMethod?: string
   createdAt?: Date

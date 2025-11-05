@@ -31,7 +31,7 @@ export async function GET(req: NextRequest) {
 export async function POST(req: NextRequest) {
   try {
     const data = await req.json()
-    const { name, email, phone, address, items, total, userId } = data
+    const { name, email, phone, address, items, total, userId, shippingFee, deliveryOption } = data
 
     if (!name || !phone || !address || !items || !total) {
       return NextResponse.json({ error: 'Données manquantes' }, { status: 400 })
@@ -45,6 +45,8 @@ export async function POST(req: NextRequest) {
       address,
       items,
       total,
+      shippingFee,
+      deliveryOption,
       status: 'pending',
       paymentMethod: 'Sur place',
     })
@@ -54,7 +56,7 @@ export async function POST(req: NextRequest) {
       await createNotification({
         type: 'order',
         title: 'Nouvelle commande',
-        message: `Nouvelle commande de ${name} pour un montant de ${total.toFixed(2)}dt`,
+        message: `Nouvelle commande de ${name} pour un montant de ${total.toFixed(2)}dt` + (shippingFee ? ` (dont livraison ${(+shippingFee).toFixed(2)}dt)` : ''),
         link: `/dashboard/commandes`,
       })
     } catch (error) {
