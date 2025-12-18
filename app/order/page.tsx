@@ -260,7 +260,11 @@ export default function OrderPage() {
       clearCart();
       
       // Redirection WhatsApp (format international pour la Tunisie)
+<<<<<<< HEAD
       window.location.href = `https://wa.me/21695787785?text=${encodeURIComponent(message)}`;
+=======
+      window.location.href = `https://wa.me/21656170165?text=${encodeURIComponent(message)}`;
+>>>>>>> 268d5249743211b0ac9f6b1ec2b3dd7f17fffba8
     } catch (err: any) {
       setError(err.message || "Erreur lors de la préparation de la commande.");
       setLoading(false);

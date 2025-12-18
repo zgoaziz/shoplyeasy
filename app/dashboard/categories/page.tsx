@@ -48,6 +48,7 @@ export default function CategoriesPage() {
 
   const getDefaultSizes = (sizeType: 'numeric' | 'letter' | 'none'): string[] => {
     if (sizeType === 'numeric') {
+<<<<<<< HEAD
       // Chaussures : pointures enfants + adultes
       const childSizes = ['22', '24', '26', '28', '30', '32']
       const adultSizes = Array.from({ length: 20 }, (_, i) => (36 + i).toString()) // 36-55
@@ -71,6 +72,12 @@ export default function CategoriesPage() {
         '12-13 ans',
         '14-15 ans',
       ]
+=======
+      return Array.from({ length: 20 }, (_, i) => (36 + i).toString()) // 36-55
+    }
+    if (sizeType === 'letter') {
+      return ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL']
+>>>>>>> 268d5249743211b0ac9f6b1ec2b3dd7f17fffba8
     }
     return []
   }

@@ -1,4 +1,5 @@
 node_modules
+<<<<<<< HEAD
 .env
 .env.local
 .env.production
@@ -6,3 +7,5 @@ node_modules
 dist
 build
 uploads
+=======
+>>>>>>> 268d5249743211b0ac9f6b1ec2b3dd7f17fffba8

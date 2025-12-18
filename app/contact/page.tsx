@@ -138,10 +138,17 @@ export default function ContactPage() {
                     <div>
                       <h3 className="text-lg font-semibold text-navy mb-2">Téléphone</h3>
                       <a 
+<<<<<<< HEAD
                         href="tel:95787785" 
                         className="text-gold hover:text-gold/80 font-bold text-lg sm:text-xl transition-colors"
                       >
                         95 787 785
+=======
+                        href="tel:56170165" 
+                        className="text-gold hover:text-gold/80 font-bold text-lg sm:text-xl transition-colors"
+                      >
+                        56 170 165
+>>>>>>> 268d5249743211b0ac9f6b1ec2b3dd7f17fffba8
                       </a>
                     </div>
                   </div>
@@ -191,7 +198,11 @@ export default function ContactPage() {
 
             {/* Call to Action */}
             <div className="text-center">
+<<<<<<< HEAD
               <a href="tel:95787785">
+=======
+              <a href="tel:56170165">
+>>>>>>> 268d5249743211b0ac9f6b1ec2b3dd7f17fffba8
                 <Button size="lg" className="bg-gold hover:bg-gold/90 text-white text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4">
                   <Phone className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                   Appelez-nous maintenant
@@ -302,7 +313,11 @@ export default function ContactPage() {
               <CardContent className="p-0">
                 <div className="aspect-[4/3] relative">
                   <iframe
+<<<<<<< HEAD
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.123495787785!2d11.085997!3d36.851513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzYsNTEnMDUuNSJOIDExLDAnMDguNiJF!5e0!3m2!1sfr!2stn!4v123495787785"
+=======
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.1234567890123!2d11.085997!3d36.851513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzYsNTEnMDUuNSJOIDExLDAnMDguNiJF!5e0!3m2!1sfr!2stn!4v1234567890123"
+>>>>>>> 268d5249743211b0ac9f6b1ec2b3dd7f17fffba8
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -365,7 +380,11 @@ export default function ContactPage() {
                 Notre équipe se fera un plaisir de vous accompagner dans vos achats.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
                 <a href="tel:95787785">
+=======
+                <a href="tel:56170165">
+>>>>>>> 268d5249743211b0ac9f6b1ec2b3dd7f17fffba8
                   <Button size="lg" className="bg-gold hover:bg-gold/90 text-white">
                     <Phone className="mr-2 h-4 w-4" />
                     Commander par téléphone
