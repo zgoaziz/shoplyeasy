@@ -1,4 +1,4 @@
-// File: C:\Users\PC\Downloads\shoplyeasy\shoplyeasy\app\dashboard\commandes\page.tsx
+// File: C:\Users\PC\Downloads\shoplyeasy-main\shoplyeasy-main\app\dashboard\commandes\page.tsx
 import * as entry from '../../../../../app/dashboard/commandes/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

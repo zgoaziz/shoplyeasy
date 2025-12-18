@@ -1,4 +1,4 @@
-// File: C:\Users\PC\Downloads\shoplyeasy\shoplyeasy\app\addresses\page.tsx
+// File: C:\Users\PC\Downloads\shoplyeasy-main\shoplyeasy-main\app\addresses\page.tsx
 import * as entry from '../../../../app/addresses/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

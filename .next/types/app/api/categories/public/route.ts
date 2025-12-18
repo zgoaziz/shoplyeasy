@@ -1,4 +1,4 @@
-// File: C:\Users\PC\Downloads\shoplyeasy\shoplyeasy\app\api\categories\public\route.ts
+// File: C:\Users\PC\Downloads\shoplyeasy-main\shoplyeasy-main\app\api\categories\public\route.ts
 import * as entry from '../../../../../../app/api/categories/public/route.js'
 import type { NextRequest } from 'next/server.js'
 
